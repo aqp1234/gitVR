@@ -17303,8 +17303,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dfdddaad576c6944bd3d7504f27d631, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerbuttonprefab: {fileID: 1488915292611865846, guid: ee495fe7defd7ba42b951ba8ba4968d2, type: 3}
-  npcbuttonprefab: {fileID: 2066335660928828376, guid: 385c0372e353a5246baaeaf2e639b375, type: 3}
+  playerbuttonprefab: {fileID: 0}
+  npcbuttonprefab: {fileID: 0}
 --- !u!4 &395233035
 Transform:
   m_ObjectHideFlags: 0
@@ -83907,8 +83907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96888d419857c7d47bb08f7740672ea6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 20
-  turnSpeed: 100
+  moveSpeed: 0
+  turnSpeed: 0
   playerCamera: {fileID: 934418474}
 --- !u!1 &1862761547 stripped
 GameObject:
@@ -88209,6 +88209,7 @@ Light:
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
+  m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
 --- !u!4 &1955585873
