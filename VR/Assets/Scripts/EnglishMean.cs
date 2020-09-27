@@ -10,9 +10,8 @@ public class EnglishMean : MonoBehaviour
     //public Text meantext;
     // Start is called before the first frame update
     public void OnClickEnglishMeanButton(){
-        Debug.Log("hello");
         GameObject.Find("Canvas").transform.Find("ExitButton").gameObject.SetActive(true);
-        GameObject.Find("Canvas").transform.Find("EnglishMeanInputField").gameObject.SetActive(true);
+        GameObject.Find("Canvas").transform.Find("EnglishMeaningPanel1").gameObject.SetActive(true);
         //GameObject.Find("Director").GetComponent<LeftUIOpenCloseScript>().PanelOpenorClose();
     }
 

@@ -8,7 +8,7 @@ public class TextToSpeech : MonoBehaviour
     // Start is called before the first frame update
     public void OnClickTextToSpeechButton(){
         GameObject.Find("Canvas").transform.Find("ExitButton").gameObject.SetActive(true);
-        GameObject.Find("Canvas").transform.Find("TextToSpeechInputField").gameObject.SetActive(true);
+        GameObject.Find("Canvas").transform.Find("TTSPanel1").gameObject.SetActive(true);
         //GameObject.Find("Director").GetComponent<LeftUIOpenCloseScript>().PanelOpenorClose();
     }
 

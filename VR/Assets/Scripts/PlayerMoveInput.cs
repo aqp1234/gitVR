@@ -5,6 +5,7 @@ using Valve.VR;
 
 public class PlayerMoveInput : MonoBehaviour
 {
+    private string[] interactiveButtons = {"EnglishMeaning", "KoreantoEnglish", "TTS", "Button4"};
     public float minmove = 0.2f;
     public Transform camTr;
     private float speed = 10.0f;
@@ -13,11 +14,8 @@ public class PlayerMoveInput : MonoBehaviour
     public SteamVR_Action_Boolean TouchPad;
     public SteamVR_Action_Vector2 Joystick;
     public SteamVR_Action_Boolean Grip;
-    public SteamVR_Action_Boolean Left;
-    public SteamVR_Action_Boolean Right;
     public GameObject canvas;
     public bool iscanvasactive = false;
-    public GameObject player;
 
     void Start()
     {
@@ -46,13 +44,6 @@ public class PlayerMoveInput : MonoBehaviour
             exitorgetui();
             canvas.SetActive(iscanvasactive);
         }
-        if (getLeft()){
-            player.transform.Rotate(new Vector3(0.0f, -30.0f, 0.0f));
-        }
-        if (getRight())
-        {
-            player.transform.Rotate(new Vector3(0.0f, +30.0f, 0.0f));
-        }
     }
     public bool getTouchPad(){
         return TouchPad.GetStateDown(handType);
@@ -63,16 +54,10 @@ public class PlayerMoveInput : MonoBehaviour
     public bool getGripGrab(){
         return Grip.GetStateDown(handType);
     }
-    public bool getLeft(){
-        return Left.GetStateDown(handType);
-    }
-    public bool getRight(){
-        return Right.GetStateDown(handType);
-    }
     public void exitorgetui(){
         iscanvasactive = !iscanvasactive;
-        for(int a = 5; a < 9; a++){
-            canvas.transform.GetChild(a).gameObject.SetActive(iscanvasactive);
+        foreach(string buttonname in interactiveButtons){
+            canvas.transform.Find(buttonname).gameObject.SetActive(iscanvasactive);
         }
         if(iscanvasactive){
             minmove = 1.0f;
@@ -80,22 +65,5 @@ public class PlayerMoveInput : MonoBehaviour
         else{
             minmove = 0.2f;
         }
-        
     }
-    /*public void clickUIButton()
-    {
-        iscanvasactive = !iscanvasactive;
-        for (int a = 5; a < 9; a++)
-        {
-            canvas.transform.GetChild(a).gameObject.SetActive(iscanvasactive);
-        }
-        if (iscanvasactive)
-        {
-            minmove = 1.0f;
-        }
-        else
-        {
-            minmove = 0.2f;
-        }
-    }*/
 }

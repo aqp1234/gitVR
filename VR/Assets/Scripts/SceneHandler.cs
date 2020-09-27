@@ -24,7 +24,7 @@ public class SceneHandler : MonoBehaviour
             PointerEventData e_Data = new PointerEventData(EventSystem.current);
             clickHandler.OnPointerClick(e_Data);
         }
-        if(e.target.name.Substring(0,12).Equals("playerbutton")){
+        if(e.target.tag.Equals("playerbutton")){
             string current_number =  e.target.name.Substring(e.target.name.Length - 1);
             GameObject.Find("Director").GetComponent<testdbscript>().PlayNPCScenario(Int32.Parse(current_number));
             Debug.Log(e.target.name.Substring(e.target.name.Length - 1));

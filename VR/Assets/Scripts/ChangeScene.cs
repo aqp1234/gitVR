@@ -7,6 +7,6 @@ public class ChangeScene : MonoBehaviour
 {
     public void NextScene()
     {
-        SceneManager.LoadScene("Town");
+        SceneManager.LoadScene("RecordScene");
     }
 }

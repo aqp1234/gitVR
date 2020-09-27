@@ -142,7 +142,6 @@ public class testdbscript : MonoBehaviour
         if(scenario_number == null){
             Debug.Log("finish");
             GameObject.Find("ConversationText").GetComponent<Text>().text = "finish";
-            GameObject.Find("Director").GetComponent<ChangeScene>().NextScene();
             return;
         }
         GameObject[] playerbuttonarr = GameObject.FindGameObjectsWithTag("npcbutton");

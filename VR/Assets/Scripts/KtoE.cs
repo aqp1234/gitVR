@@ -9,7 +9,7 @@ public class KtoE: MonoBehaviour
     // Start is called before the first frame update
     public void OnClickKtoEButton(){
         GameObject.Find("Canvas").transform.Find("ExitButton").gameObject.SetActive(true);
-        GameObject.Find("Canvas").transform.Find("KtoEInputField").gameObject.SetActive(true);
+        GameObject.Find("Canvas").transform.Find("KoreantoEnglishPanel1").gameObject.SetActive(true);
         //GameObject.Find("Director").GetComponent<LeftUIOpenCloseScript>().PanelOpenorClose();
     }
 

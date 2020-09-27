@@ -19,9 +19,9 @@ public class SpeechToText : MonoBehaviour
     {
         System.Diagnostics.ProcessStartInfo psi = new System.Diagnostics.ProcessStartInfo();
 
-        psi.FileName = @"C:\Users\211\AppData\Local\Programs\Python\Python38-32\python.exe";         //python.exe 경로
+        psi.FileName = @"C:\Users\KMS\AppData\Local\Programs\Python\Python38-32\python.exe";         //python.exe 경로
 
-        var script = Application.dataPath + "/pythoncode/sttTest.py";        //파이썬 실행파일 경로
+        var script = Application.dataPath + "/pythoncode/audio.py";        //파이썬 실행파일 경로
 
 
         psi.Arguments = $"\"{script}\"";            //파일경로와 인자 psi객체에 전달

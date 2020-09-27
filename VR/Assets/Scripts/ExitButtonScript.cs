@@ -7,6 +7,7 @@ using System;
 public class ExitButtonScript : MonoBehaviour
 {
     // Start is called before the first frame update
+    private string[] interactiveButtons = {"EnglishMeaning", "KoreantoEnglish", "TTS", "Button4"};
     public GameObject canvas;
     
     public void OnClickExitButton(){
@@ -36,11 +37,14 @@ public class ExitButtonScript : MonoBehaviour
         for(int a = 0; a < GameObject.Find("LeftUIPanel").transform.childCount; a++){
             GameObject.Find("LeftUIPanel").transform.GetChild(a).gameObject.SetActive(true);
         }*/
-        for(int a = 0; a < canvas.transform.childCount; a++){
+        for (int a = 0; a < canvas.transform.childCount; a++){
             canvas.transform.GetChild(a).gameObject.SetActive(false);
         }
-        for(int a = 5; a < 9; a++){
+        /*for (int a = 5; a < 9; a++){
             canvas.transform.GetChild(a).gameObject.SetActive(true);
+        }*/
+        foreach(string buttonname in interactiveButtons){
+            canvas.transform.Find(buttonname).gameObject.SetActive(true);
         }
         canvas.SetActive(false);
         GameObject.Find("Controller (left)").GetComponent<PlayerMoveInput>().minmove = 0.2f;

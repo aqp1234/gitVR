@@ -12,9 +12,9 @@
 12. 시작할때 화면 추가
 
 
-키보드 가져와야되고
-EnglishMeaningPanel1>Button을 누르면 EnglishMeaningPanel2가 나오고 Panel1이 없어져야됨 (스크립트 개발)
+키보드 가져와야되고 // 못해이건....
+EnglishMeaningPanel1>Button을 누르면 EnglishMeaningPanel2가 나오고 Panel1이 없어져야됨 (스크립트 개발) //완료
 
-UI 버튼 4개 순서 > 이름으로 변경
+UI 버튼 4개 순서 > 이름으로 변경 //완료
 
-UI 버튼 4개 클릭하면 열리는 Panel 이름변경필요
+UI 버튼 4개 클릭하면 열리는 Panel 이름변경필요 //완료
