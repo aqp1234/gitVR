@@ -43,6 +43,7 @@ public class npc_scenario_class
 
 public class testdbscript : MonoBehaviour
 {
+    private string[] interactiveButtons = { "EnglishMeaning", "KoreantoEnglish", "TTS", "Button4" };
     public GameObject canvas;
     public Transform playerbuttonprefab;
     public Transform npcbuttonprefab;
@@ -73,10 +74,15 @@ public class testdbscript : MonoBehaviour
         dbconn.Open();
         //GameObject.Find("Director").GetComponent<ExitButtonScript>().OnClickExitButton();
         canvas.SetActive(true);
+        for (int a = 0; a < canvas.transform.childCount; a++)
+        {
+            canvas.transform.GetChild(a).gameObject.SetActive(false);
+        }
         canvas.transform.Find("ExitButton").gameObject.SetActive(true);
         canvas.transform.Find("ConversationPanel").gameObject.SetActive(true);
-        for(int a = 2; a < 6; a++){
-            canvas.transform.Find("Button"+a).gameObject.SetActive(false);
+        foreach (string buttonname in interactiveButtons)
+        {
+            canvas.transform.Find(buttonname).gameObject.SetActive(false);
         }
         //GameObject.Find("Director").GetComponent<LeftUIOpenCloseScript>().PanelOpenorClose();
 
@@ -113,7 +119,7 @@ public class testdbscript : MonoBehaviour
             npc_scenario_count++;
         }
         reader.Close();
-        
+
         // NPC먼저인지 Player먼저인지 판단해야 되는 스크립트 개발해야됨
         Transform npcbuttonins = Instantiate(npcbuttonprefab);
         npcbuttonins.SetParent(GameObject.Find("ConversationPanel").transform);
@@ -121,10 +127,10 @@ public class testdbscript : MonoBehaviour
         npcbuttonins.name = "npcbutton";
         npcbuttonins.GetComponent<RectTransform>().anchorMax = new Vector2(1f,1f);
         npcbuttonins.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
-        npcbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-50.0f, 0.0f, 1.0f);
-        npcbuttonins.transform.localPosition = new Vector3(npcbuttonins.transform.localPosition.x, npcbuttonins.transform.localPosition.y, 500.0f);
+        npcbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-50.0f, -300.0f, 1.0f);
+        npcbuttonins.transform.localPosition = new Vector3(npcbuttonins.transform.localPosition.x, npcbuttonins.transform.localPosition.y, 0.0f);
         npcbuttonins.GetComponent<RectTransform>().localScale = new Vector3(1.0f,1.0f,1.0f);
-        npcbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(80.0f, 60.0f);
+        npcbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(50.0f, 50.0f);
         npcbuttonins.GetComponent<RectTransform>().rotation = new Quaternion(0.0f,0.0f,0.0f,0.0f);
         string first_scenario = npc_foreign_scenario_arr[(int) scenario_number-1].get_foreign_scenario();
         GameObject.Find("ConversationText").GetComponent<Text>().text = first_scenario;
@@ -140,13 +146,12 @@ public class testdbscript : MonoBehaviour
     {
         scenario_number = npc_foreign_scenario_arr[(int) scenario_number-1].get_next_player_scenario_number();
         if(scenario_number == null){
-            Debug.Log("finish");
             GameObject.Find("ConversationText").GetComponent<Text>().text = "finish";
             return;
         }
-        GameObject[] playerbuttonarr = GameObject.FindGameObjectsWithTag("npcbutton");
-        for(int a = 0; a < playerbuttonarr.Length; a++){
-            Destroy(playerbuttonarr[a]);
+        GameObject[] npcbuttonarr = GameObject.FindGameObjectsWithTag("npcbutton");
+        for(int a = 0; a < npcbuttonarr.Length; a++){
+            Destroy(npcbuttonarr[a]);
         } // npcbutton 삭제
         GameObject.Find("ConversationText").GetComponent<Text>().text = ""; // text 초기화
         for(int a = 0; a < player_foreign_scenario_arr[(int) scenario_number-1].Length; a++) // player시나리오 개수만큼 반복
@@ -161,10 +166,10 @@ public class testdbscript : MonoBehaviour
             //playerbuttonins.GetChild(0).GetComponent<Text>().text = ""+(player_foreign_scenario_arr[(int) scenario_number-1].Length - a);
             playerbuttonins.GetComponent<RectTransform>().anchorMax = new Vector2(1f,1f);
             playerbuttonins.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
-            playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-80*(a), 0, 0);
-            playerbuttonins.transform.localPosition = new Vector3(playerbuttonins.transform.localPosition.x, playerbuttonins.transform.localPosition.y, 500.0f);
+            playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-55*(a+1), -300, 0);
+            playerbuttonins.transform.localPosition = new Vector3(playerbuttonins.transform.localPosition.x, playerbuttonins.transform.localPosition.y, 0.0f);
             playerbuttonins.GetComponent<RectTransform>().localScale = new Vector3(1.0f,1.0f,1.0f);
-            playerbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(80.0f, 60.0f);
+            playerbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(50.0f, 50.0f);
             playerbuttonins.GetComponent<RectTransform>().rotation = new Quaternion(0.0f,0.0f,0.0f,0.0f);
         }
     }
@@ -173,6 +178,7 @@ public class testdbscript : MonoBehaviour
     {
         //string current_button_name = EventSystem.current.currentSelectedGameObject.gameObject.name;
         //current_button_number = GameObject.FindGameObjectsWithTag("playerbutton").Length-1 - Int32.Parse(current_button_name.Substring(current_button_name.Length - 1));
+        Debug.Log("lastscenario = " + scenario_number + "current" + current_button_number);
         scenario_number = player_foreign_scenario_arr[(int) scenario_number-1][current_button_number].get_next_npc_scenario_number();
         Debug.Log(scenario_number);
         if(scenario_number == null){
@@ -192,14 +198,15 @@ public class testdbscript : MonoBehaviour
         npcbuttonins.name = "npcbutton";
         npcbuttonins.GetComponent<RectTransform>().anchorMax = new Vector2(1f,1f);
         npcbuttonins.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
-        npcbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-50.0f, 0.0f, 1.0f);
-        npcbuttonins.transform.localPosition = new Vector3(npcbuttonins.transform.localPosition.x, npcbuttonins.transform.localPosition.y, 500.0f);
+        npcbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-50.0f, -300.0f, 1.0f);
+        npcbuttonins.transform.localPosition = new Vector3(npcbuttonins.transform.localPosition.x, npcbuttonins.transform.localPosition.y, 0.0f);
         npcbuttonins.GetComponent<RectTransform>().localScale = new Vector3(1.0f,1.0f,1.0f);
-        npcbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(80.0f, 60.0f);
+        npcbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(50.0f, 50.0f);
         npcbuttonins.GetComponent<RectTransform>().rotation = new Quaternion(0.0f,0.0f,0.0f,0.0f);
         //GameObject.Find("Director").GetComponent<TextToSpeech>().Option2_ExecProcess(scenario);
         GameObject.Find("AudioDirector").GetComponent<AudioSource>().clip = (AudioClip)Resources.Load("NPC/"+world_id+"_"+scene_id+"_"+situation_id+"/"+scenario_number);
         GameObject.Find("AudioDirector").GetComponent<AudioSource>().Play();
+        Debug.Log("hellofinish");
     }
 
     public int CountMAXScenarioNumber(IDbCommand dbcmd, string sqlQuery){

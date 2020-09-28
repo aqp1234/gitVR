@@ -20,15 +20,22 @@ public class SceneHandler : MonoBehaviour
     public void PointerClick(object sender, PointerEventArgs e)
     {
         IPointerClickHandler clickHandler = e.target.GetComponent<Collider>().gameObject.GetComponent<IPointerClickHandler>();
-        if(e.target.transform.GetComponent<Button>() != null){
-            PointerEventData e_Data = new PointerEventData(EventSystem.current);
-            clickHandler.OnPointerClick(e_Data);
+        
+        if (e.target.transform.GetComponent<Button>() != null){
+            if (e.target.tag.Equals("playerbutton"))
+            {
+                int current_number = Int32.Parse(e.target.name.Substring(e.target.name.Length - 1));
+                GameObject.Find("Director").GetComponent<testdbscript>().PlayNPCScenario(current_number);
+                Debug.Log(e.target.name.Substring(e.target.name.Length - 1));
+            }
+            else
+            {
+                PointerEventData e_Data = new PointerEventData(EventSystem.current);
+                clickHandler.OnPointerClick(e_Data);
+            }
+            
         }
-        if(e.target.tag.Equals("playerbutton")){
-            string current_number =  e.target.name.Substring(e.target.name.Length - 1);
-            GameObject.Find("Director").GetComponent<testdbscript>().PlayNPCScenario(Int32.Parse(current_number));
-            Debug.Log(e.target.name.Substring(e.target.name.Length - 1));
-        }
+        
     }
 
     public void PointerInside(object sender, PointerEventArgs e)
