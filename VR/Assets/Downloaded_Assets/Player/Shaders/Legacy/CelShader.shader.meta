@@ -1,9 +1,3 @@
-fileFormatVersion: 2
-guid: 23909667c68d42d438b2d58d160c6cd9
-ShaderImporter:
-  externalObjects: {}
-  defaultTextures:
-  - Ramp: {fileID: 2800000, guid: 55d9f997de358a34a85e48ef6b49e8f7, type: 3}
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:cb994bfc6ede3022916d9f6b49eddd0f954e1aa983aebfe4d2159b755c0babed
+size 259

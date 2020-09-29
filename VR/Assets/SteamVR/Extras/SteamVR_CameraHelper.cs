@@ -1,18 +1,3 @@
-﻿using UnityEngine;
-using System.Collections;
-
-namespace Valve.VR
-{
-	public class SteamVR_CameraHelper : MonoBehaviour
-	{
-		void Start()
-		{
-#if OPENVR_XR_API && UNITY_LEGACY_INPUT_HELPERS
-			if (this.gameObject.GetComponent<UnityEngine.SpatialTracking.TrackedPoseDriver>() == null)
-			{
-				this.gameObject.AddComponent<UnityEngine.SpatialTracking.TrackedPoseDriver>();
-			}
-#endif
-		}
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:917c5d383c417d56ef21605b777440afa866102824ffa9e17d6fda3012f8bd2b
+size 410

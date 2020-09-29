@@ -1,32 +1,3 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-
-using UnityEngine;
-using System.Collections;
-
-namespace Valve.VR.InteractionSystem.Sample
-{
-    public class RenderModelChangerUI : UIElement
-    {
-        public GameObject leftPrefab;
-        public GameObject rightPrefab;
-
-        protected SkeletonUIOptions ui;
-
-        protected override void Awake()
-        {
-            base.Awake();
-
-            ui = this.GetComponentInParent<SkeletonUIOptions>();
-        }
-
-        protected override void OnButtonClick()
-        {
-            base.OnButtonClick();
-
-            if (ui != null)
-            {
-                ui.SetRenderModel(this);
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:756939dd7f7b38ca14cb1d1d48a98384c993d6eb9578cf600d463826a0188ced
+size 742

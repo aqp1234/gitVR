@@ -1,34 +1,3 @@
-import unittest
-from test import support
-
-# Skip this test if _tkinter wasn't built.
-support.import_module('_tkinter')
-
-# Skip test if tk cannot be initialized.
-support.requires('gui')
-
-import tkinter
-from _tkinter import TclError
-from tkinter import ttk
-from tkinter.test import runtktests
-
-root = None
-try:
-    root = tkinter.Tk()
-    button = ttk.Button(root)
-    button.destroy()
-    del button
-except TclError as msg:
-    # assuming ttk is not available
-    raise unittest.SkipTest("ttk not available: %s" % msg)
-finally:
-    if root is not None:
-        root.destroy()
-    del root
-
-def test_main():
-    support.run_unittest(
-            *runtktests.get_tests(text=False, packages=['test_ttk']))
-
-if __name__ == '__main__':
-    test_main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:812e874952022ff1e1dd271150cbed497fe65eaa83d74a34763133b609b9a1f5
+size 780

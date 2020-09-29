@@ -1,26 +1,3 @@
-from PyDictionary import PyDictionary
-import sys
-
-dictionary=PyDictionary()
-
-text = sys.argv[1]
-
-data = dictionary.meaning(text)
-print(text + ": ")
-if 'Noun' in data:
-    print('Noun')
-    print(str(data['Noun']))
-if 'Verb' in data:
-    print('Verb')
-    print(str(data['Verb']))
-if 'Adjective' in data:
-    print('Adjective')
-    print(str(data['Adjective']))
-if 'Adverb' in data:
-    print('Adverb')
-    print(str(data['Adverb']))
-
-# if 'Noun' in data:
-#     noun = data['Noun'].sp
-#     for i in range(0, len(data['Noun'])):
-#         data['Noun'][i]
+version https://git-lfs.github.com/spec/v1
+oid sha256:d9887e9fe7367a25e262df15ec0fd328006d984ba0cc63a336d791e816239674
+size 580

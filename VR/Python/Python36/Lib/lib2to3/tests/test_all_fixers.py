@@ -1,27 +1,3 @@
-"""Tests that run all fixer modules over an input stream.
-
-This has been broken out into its own test module because of its
-running time.
-"""
-# Author: Collin Winter
-
-# Python imports
-import unittest
-import test.support
-
-# Local imports
-from . import support
-
-
-@test.support.requires_resource('cpu')
-class Test_all(support.TestCase):
-
-    def setUp(self):
-        self.refactor = support.get_refactorer()
-
-    def test_all_project_files(self):
-        for filepath in support.all_project_files():
-            self.refactor.refactor_file(filepath)
-
-if __name__ == '__main__':
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:5db69ca0028c57eb6b86471d32def5a98478b28e5e8282fbb1e8cd437d0f0829
+size 622

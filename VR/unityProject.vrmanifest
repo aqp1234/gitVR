@@ -1,16 +1,3 @@
-{
-  "source": "Unity",
-  "applications": [
-    {
-      "app_key": "application.generated.unity.vr.exe",
-      "launch_type": "url",
-      "url": "steam://launch/",
-      "action_manifest_path": "C:\\Users\\211\\Desktop\\gitVR\\VR\\Assets\\StreamingAssets\\SteamVR\\actions.json",
-      "strings": {
-        "en_us": {
-          "name": "VR [Testing]"
-        }
-      }
-    }
-  ]
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:d62bd77d4bf1d226a2f58e214b750f8837ff5e889181ae8c4bc87be31f43985d
+size 395

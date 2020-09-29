@@ -1,33 +1,3 @@
-"""Test cases for test_pyclbr.py"""
-
-def f(): pass
-
-class Other(object):
-    @classmethod
-    def foo(c): pass
-
-    def om(self): pass
-
-class B (object):
-    def bm(self): pass
-
-class C (B):
-    foo = Other().foo
-    om = Other.om
-
-    d = 10
-
-    # XXX: This causes test_pyclbr.py to fail, but only because the
-    #      introspection-based is_method() code in the test can't
-    #      distinguish between this and a genuine method function like m().
-    #      The pyclbr.py module gets this right as it parses the text.
-    #
-    #f = f
-
-    def m(self): pass
-
-    @staticmethod
-    def sm(self): pass
-
-    @classmethod
-    def cm(self): pass
+version https://git-lfs.github.com/spec/v1
+oid sha256:cfa88a0d19af3b2d6c578cc63d1384e3e2cad9cb8bb0b0b952d5d92964053d0b
+size 681

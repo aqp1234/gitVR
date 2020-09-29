@@ -1,5 +1,3 @@
-sceneSetups:
-- path: Assets/VRKeys/Scenes/Example Scene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f2ba2333eb7bfb59c02005b50f6e91bc3f6240a699a3ed1db0f74035541b27b
+size 93

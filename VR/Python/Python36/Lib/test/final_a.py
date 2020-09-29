@@ -1,19 +1,3 @@
-"""
-Fodder for module finalization tests in test_module.
-"""
-
-import shutil
-import test.final_b
-
-x = 'a'
-
-class C:
-    def __del__(self):
-        # Inspect module globals and builtins
-        print("x =", x)
-        print("final_b.x =", test.final_b.x)
-        print("shutil.rmtree =", getattr(shutil.rmtree, '__name__', None))
-        print("len =", getattr(len, '__name__', None))
-
-c = C()
-_underscored = C()
+version https://git-lfs.github.com/spec/v1
+oid sha256:3cfd60908b112e81dc727eb6272ac4c61116e501d392612131253fa39f068a1c
+size 430

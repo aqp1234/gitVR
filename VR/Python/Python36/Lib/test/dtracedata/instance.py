@@ -1,24 +1,3 @@
-import gc
-
-class old_style_class():
-    pass
-class new_style_class(object):
-    pass
-
-a = old_style_class()
-del a
-gc.collect()
-b = new_style_class()
-del b
-gc.collect()
-
-a = old_style_class()
-del old_style_class
-gc.collect()
-b = new_style_class()
-del new_style_class
-gc.collect()
-del a
-gc.collect()
-del b
-gc.collect()
+version https://git-lfs.github.com/spec/v1
+oid sha256:2fedf311b766574a236e77b873f04a6c1adc3c84feb45ae40c70e0117f129d76
+size 341

@@ -1,10 +1,3 @@
-import os
-from test.support import load_package_tests, import_module
-
-# Skip tests if we don't have threading.
-import_module('threading')
-# Skip tests if we don't have concurrent.futures.
-import_module('concurrent.futures')
-
-def load_tests(*args):
-    return load_package_tests(os.path.dirname(__file__), *args)
+version https://git-lfs.github.com/spec/v1
+oid sha256:363ce1fc67130c6beb17fdcc7ecc987d125cc61952c0bb4d625c5316ceb3ddf7
+size 322

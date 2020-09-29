@@ -1,5 +1,3 @@
-OpenVR (Desktop) Package for Unity copyright © 2019 Unity Technologies ApS
-
-Licensed under the Unity Companion License for Unity-dependent projects--see [Unity Companion License](http://www.unity3d.com/legal/licenses/Unity_Companion_License). 
-
-Unless expressly provided otherwise, the Software under this license is made available strictly on an “AS IS” BASIS WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED. Please review the license for details on these and other terms and conditions.
+version https://git-lfs.github.com/spec/v1
+oid sha256:c7cc5bd3341a8455f35e71d112b35df1f0b36ac534790e1b999db3ec4b0faa47
+size 500

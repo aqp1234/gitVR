@@ -1,13 +1,3 @@
-# Reference cycles involving only the ob_type field are rather uncommon
-# but possible.  Inspired by SF bug 1469629.
-
-import gc
-
-def leak():
-    class T(type):
-        pass
-    class U(type, metaclass=T):
-        pass
-    U.__class__ = U
-    del U
-    gc.collect(); gc.collect(); gc.collect()
+version https://git-lfs.github.com/spec/v1
+oid sha256:bb1299a3ce6f5e87660e50a749fe44184aa03672002d8db2c642270a56c666a9
+size 306

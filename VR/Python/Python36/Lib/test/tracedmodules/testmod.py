@@ -1,9 +1,3 @@
-def func(x):
-    b = x + 1
-    return b + 2
-
-def func2():
-    """Test function for issue 9936 """
-    return (1,
-            2,
-            3)
+version https://git-lfs.github.com/spec/v1
+oid sha256:54f28ffdb62ae3e792fae4c3347974173e2ff2ca9f1345de7bffddc12209ef79
+size 152

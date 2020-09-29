@@ -1,16 +1,3 @@
-import unittest.test
-
-from test import support
-
-
-def test_main():
-    # used by regrtest
-    support.run_unittest(unittest.test.suite())
-    support.reap_children()
-
-def load_tests(*_):
-    # used by unittest
-    return unittest.test.suite()
-
-if __name__ == "__main__":
-    test_main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:e114db7ac57f700f5df76b03bfe72a8d4f7d25d4a769eb03df98fa03e59fd059
+size 302

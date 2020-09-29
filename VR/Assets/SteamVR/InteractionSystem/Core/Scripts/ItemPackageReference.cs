@@ -1,17 +1,3 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Keeps track of the ItemPackage this object is a part of
-//
-//=============================================================================
-
-using UnityEngine;
-using System.Collections;
-
-namespace Valve.VR.InteractionSystem
-{
-	//-------------------------------------------------------------------------
-	public class ItemPackageReference : MonoBehaviour
-	{
-		public ItemPackage itemPackage;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8b6badd9c0ccfa687fa5ee6e4d5b5457e48c93915d9e6b91707a96bd11fcbaac
+size 510

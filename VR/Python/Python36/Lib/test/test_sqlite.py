@@ -1,24 +1,3 @@
-import test.support
-
-# Skip test if _sqlite3 module not installed
-test.support.import_module('_sqlite3')
-
-import unittest
-import sqlite3
-from sqlite3.test import (dbapi, types, userfunctions,
-                                factory, transactions, hooks, regression,
-                                dump)
-
-def load_tests(*args):
-    if test.support.verbose:
-        print("test_sqlite: testing with version",
-              "{!r}, sqlite_version {!r}".format(sqlite3.version,
-                                                 sqlite3.sqlite_version))
-    return unittest.TestSuite([dbapi.suite(), types.suite(),
-                               userfunctions.suite(),
-                               factory.suite(), transactions.suite(),
-                               hooks.suite(), regression.suite(),
-                               dump.suite()])
-
-if __name__ == "__main__":
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:7ba01fc295943130f9d7c64a9ff0621ffad796f2a57fd7a4b8baedfd1a314781
+size 917

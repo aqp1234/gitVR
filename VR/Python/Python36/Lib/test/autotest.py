@@ -1,5 +1,3 @@
-# This should be equivalent to running regrtest.py from the cmdline.
-# It can be especially handy if you're in an interactive shell, e.g.,
-# from test import autotest.
-from test.libregrtest import main
-main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:fc3ed08004a23760e39194633ef24df4aa0321272020249b24bf0a2795d9a708
+size 214

@@ -1,11 +1,3 @@
-"""This is a test"""
-
-from __future__ import nested_scopes; import string; from __future__ import \
-     nested_scopes
-
-def f(x):
-    def g(y):
-        return x + y
-    return g
-
-result = f(2)(4)
+version https://git-lfs.github.com/spec/v1
+oid sha256:a3edab0824f99623eb90e632aba51b247dec34932848cd30c7a4bedd3e1e225d
+size 207

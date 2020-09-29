@@ -1,26 +1,3 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Mic : MonoBehaviour
-{
-
-    AudioSource aud;
-
-    void Start() {
-        aud = GetComponent<AudioSource>();
-    }
-
-
-    public void PlaySnd() { 
-        aud.Play();
-        Debug.Log("PlaySound");
-    }
-
-    public void RecSnd() {
-        aud.clip = Microphone.Start(Microphone.devices[0].ToString(), false, 3, 44100);
-        Debug.Log("Record");
-    }
-
-
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:8916d6b22f7dbca11ae65abc4d5f0bc28613d45b90520c0dbe5e8a454ff05d9a
+size 479

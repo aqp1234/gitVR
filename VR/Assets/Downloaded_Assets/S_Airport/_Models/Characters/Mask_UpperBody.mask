@@ -1,11 +1,3 @@
-%YAML 1.1
-%TAG !u! tag:unity3d.com,2011:
---- !u!319 &101100000
-AvatarMask:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: Mask_UpperBody
-  m_Mask: 00000000010000000000000000000000000000000100000001000000010000000100000000000000000000000100000001000000
-  m_Elements: []
+version https://git-lfs.github.com/spec/v1
+oid sha256:d53f73e9ba4c58608ecbedeb4c39870deb0002cc98cff9a78f19b08a1f431fff
+size 370

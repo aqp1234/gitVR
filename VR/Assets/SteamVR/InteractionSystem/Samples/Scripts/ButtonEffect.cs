@@ -1,32 +1,3 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-
-using UnityEngine;
-using System.Collections;
-using UnityEngine.SceneManagement;
-using System;
-
-namespace Valve.VR.InteractionSystem.Sample
-{
-    public class ButtonEffect : MonoBehaviour
-    {
-        public void OnButtonDown(Hand fromHand)
-        {
-            ColorSelf(Color.cyan);
-            fromHand.TriggerHapticPulse(1000);
-        }
-
-        public void OnButtonUp(Hand fromHand)
-        {
-            ColorSelf(Color.white);
-        }
-
-        private void ColorSelf(Color newColor)
-        {
-            Renderer[] renderers = this.GetComponentsInChildren<Renderer>();
-            for (int rendererIndex = 0; rendererIndex < renderers.Length; rendererIndex++)
-            {
-                renderers[rendererIndex].material.color = newColor;
-            }
-        }
-    }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:6b4cd39b697aec762414a576eda0c6bf322a0e4cd788c80001f119e3aa172e63
+size 900

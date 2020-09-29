@@ -1,15 +1,3 @@
-
-# Taken from Lib/ctypes/test/test_keeprefs.py, PointerToStructure.test().
-
-from ctypes import Structure, c_int, POINTER
-import gc
-
-def leak_inner():
-    class POINT(Structure):
-        _fields_ = [("x", c_int)]
-    class RECT(Structure):
-        _fields_ = [("a", POINTER(POINT))]
-
-def leak():
-    leak_inner()
-    gc.collect()
+version https://git-lfs.github.com/spec/v1
+oid sha256:ec2d905868bed2426f63513be7a0b3343c356690088fbd25e98ea49ed4282cad
+size 344

@@ -1,12 +1,3 @@
-from test.test_json import PyTest, CTest
-
-
-class TestDefault:
-    def test_default(self):
-        self.assertEqual(
-            self.dumps(type, default=repr),
-            self.dumps(repr(type)))
-
-
-class TestPyDefault(TestDefault, PyTest): pass
-class TestCDefault(TestDefault, CTest): pass
+version https://git-lfs.github.com/spec/v1
+oid sha256:f8da033d566ea03259a5487c520b64a410720d85ca44e1af7eef106dd3d2ee0c
+size 302

@@ -1,5 +1,3 @@
-probe begin
-{
-  println("probe: success")
-  exit ()
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:7de6cdcbcda4b226a009e43220a4785bd0aed4b89c05ca1450d916d6a3438dc5
+size 59

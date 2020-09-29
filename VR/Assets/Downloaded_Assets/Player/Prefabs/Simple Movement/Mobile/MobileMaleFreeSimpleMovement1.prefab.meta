@@ -1,14 +1,3 @@
-fileFormatVersion: 2
-guid: 16e7451e81164bc4caac73768f16ceb6
-labels:
-- Character
-- Male
-- Man
-- Mobile
-- Movement
-timeCreated: 1483633847
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:a5f858f307598450f46c6f1a35cf43c2238f1c6b4f581168dbfc02f148d1feff
+size 248

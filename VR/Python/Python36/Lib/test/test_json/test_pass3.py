@@ -1,24 +1,3 @@
-from test.test_json import PyTest, CTest
-
-
-# from http://json.org/JSON_checker/test/pass3.json
-JSON = r'''
-{
-    "JSON Test Pattern pass3": {
-        "The outermost value": "must be an object or array.",
-        "In this test": "It is an object."
-    }
-}
-'''
-
-
-class TestPass3:
-    def test_parse(self):
-        # test in/out equivalence and parsing
-        res = self.loads(JSON)
-        out = self.dumps(res)
-        self.assertEqual(res, self.loads(out))
-
-
-class TestPyPass3(TestPass3, PyTest): pass
-class TestCPass3(TestPass3, CTest): pass
+version https://git-lfs.github.com/spec/v1
+oid sha256:bd4b73abfe475c90d672ecc3d3ce9fbdb4bc4db0b3bce263a6d17d0633f2aa4b
+size 568

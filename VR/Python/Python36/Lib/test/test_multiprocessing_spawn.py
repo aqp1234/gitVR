@@ -1,12 +1,3 @@
-import unittest
-import test._test_multiprocessing
-
-from test import support
-
-if support.PGO:
-    raise unittest.SkipTest("test is not helpful for PGO")
-
-test._test_multiprocessing.install_tests_in_module_dict(globals(), 'spawn')
-
-if __name__ == '__main__':
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:cf4cdc1f18b79697f660829aa4d6002d27143abef28dbf67720f7a8b17c20fcd
+size 289

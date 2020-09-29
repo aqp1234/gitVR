@@ -1,35 +1,3 @@
-"""Tests for the gprof2html script in the Tools directory."""
-
-import os
-import sys
-import unittest
-from unittest import mock
-import tempfile
-
-from test.test_tools import skip_if_missing, import_tool
-
-skip_if_missing()
-
-class Gprof2htmlTests(unittest.TestCase):
-
-    def setUp(self):
-        self.gprof = import_tool('gprof2html')
-        oldargv = sys.argv
-        def fixup():
-            sys.argv = oldargv
-        self.addCleanup(fixup)
-        sys.argv = []
-
-    def test_gprof(self):
-        # Issue #14508: this used to fail with a NameError.
-        with mock.patch.object(self.gprof, 'webbrowser') as wmock, \
-                tempfile.TemporaryDirectory() as tmpdir:
-            fn = os.path.join(tmpdir, 'abc')
-            open(fn, 'w').close()
-            sys.argv = ['gprof2html', fn]
-            self.gprof.main()
-        self.assertTrue(wmock.open.called)
-
-
-if __name__ == '__main__':
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:9bf63d46bcc85f1c5a20cafd02d09566226b10ebc1b4b3984573134187c32058
+size 954

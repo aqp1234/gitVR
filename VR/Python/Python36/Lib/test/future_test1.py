@@ -1,11 +1,3 @@
-"""This is a test"""
-
-# Import the name nested_scopes twice to trigger SF bug #407394 (regression).
-from __future__ import nested_scopes, nested_scopes
-
-def f(x):
-    def g(y):
-        return x + y
-    return g
-
-result = f(2)(4)
+version https://git-lfs.github.com/spec/v1
+oid sha256:7c48eb48cb65f093723dbf2f5d4a48f76852654ef30765bd4a14e1375d0801ac
+size 240

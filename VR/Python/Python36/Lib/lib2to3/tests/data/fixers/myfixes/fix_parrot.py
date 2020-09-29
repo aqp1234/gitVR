@@ -1,13 +1,3 @@
-from lib2to3.fixer_base import BaseFix
-from lib2to3.fixer_util import Name
-
-class FixParrot(BaseFix):
-    """
-    Change functions named 'parrot' to 'cheese'.
-    """
-
-    PATTERN = """funcdef < 'def' name='parrot' any* >"""
-
-    def transform(self, node, results):
-        name = results["name"]
-        name.replace(Name("cheese", name.prefix))
+version https://git-lfs.github.com/spec/v1
+oid sha256:b58ddceb2582fa7fa19ed723785530749b0bee896deba3e80842157ca5bf804d
+size 360

@@ -1,10 +1,3 @@
-"""When called with a single argument, simulated fgrep with a single
-argument and no options."""
-
-import sys
-
-if __name__ == "__main__":
-    pattern = sys.argv[1]
-    for line in sys.stdin:
-        if pattern in line:
-            sys.stdout.write(line)
+version https://git-lfs.github.com/spec/v1
+oid sha256:82e5ac57d875452cfb83d2b1d06b5c8f231936f1614268caef0ce778e58bf185
+size 263

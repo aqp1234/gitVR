@@ -1,11 +1,3 @@
-fileFormatVersion: 2
-guid: 1bb6e2b3ad66d664094ce58c0b0adb79
-labels:
-- Man
-- Male
-timeCreated: 1464185470
-licenseType: Store
-NativeFormatImporter:
-  userData: 
-  assetBundleName: 
-  assetBundleVariant: 
+version https://git-lfs.github.com/spec/v1
+oid sha256:75f7efe12a86c6e10829044ee58ca1b0a228b6fc3dfc8213180cce6c69fd616d
+size 213

@@ -1,16 +1,3 @@
-import unittest
-import test._test_multiprocessing
-
-import sys
-from test import support
-
-if support.PGO:
-    raise unittest.SkipTest("test is not helpful for PGO")
-
-if sys.platform == "win32":
-    raise unittest.SkipTest("forkserver is not available on Windows")
-
-test._test_multiprocessing.install_tests_in_module_dict(globals(), 'forkserver')
-
-if __name__ == '__main__':
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:ea36c5784149a7ec6c6ec7fadedb4e7bd8376fb46c3c81909d7254cde8a1e3dc
+size 408

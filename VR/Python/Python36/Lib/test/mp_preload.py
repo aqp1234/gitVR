@@ -1,18 +1,3 @@
-import multiprocessing
-
-multiprocessing.Lock()
-
-
-def f():
-    print("ok")
-
-
-if __name__ == "__main__":
-    ctx = multiprocessing.get_context("forkserver")
-    modname = "test.mp_preload"
-    # Make sure it's importable
-    __import__(modname)
-    ctx.set_forkserver_preload([modname])
-    proc = ctx.Process(target=f)
-    proc.start()
-    proc.join()
+version https://git-lfs.github.com/spec/v1
+oid sha256:84b697ef2f8064e8e290fcbf369ae82413785237b2890b120625ca47ce0d5c1b
+size 369

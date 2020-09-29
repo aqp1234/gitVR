@@ -1,18 +1,3 @@
-from test.test_json import PyTest, CTest
-
-
-# from http://json.org/JSON_checker/test/pass2.json
-JSON = r'''
-[[[[[[[[[[[[[[[[[[["Not too deep"]]]]]]]]]]]]]]]]]]]
-'''
-
-class TestPass2:
-    def test_parse(self):
-        # test in/out equivalence and parsing
-        res = self.loads(JSON)
-        out = self.dumps(res)
-        self.assertEqual(res, self.loads(out))
-
-
-class TestPyPass2(TestPass2, PyTest): pass
-class TestCPass2(TestPass2, CTest): pass
+version https://git-lfs.github.com/spec/v1
+oid sha256:f741f1b0015141e45e351cb980443a49df4666e6a44a78fb369b74c0caa7797f
+size 466

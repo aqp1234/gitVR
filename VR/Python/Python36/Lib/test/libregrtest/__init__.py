@@ -1,5 +1,3 @@
-# We import importlib *ASAP* in order to test #15386
-import importlib
-
-from test.libregrtest.cmdline import _parse_args, RESOURCE_NAMES, ALL_RESOURCES
-from test.libregrtest.main import main
+version https://git-lfs.github.com/spec/v1
+oid sha256:881bbe860bb48893b0b3632b4f40b8c884f8f2c360d0bfa025e17d7781dc6cd2
+size 195

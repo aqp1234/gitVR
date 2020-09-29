@@ -1,13 +1,3 @@
-from test import support
-
-# Skip this test if _tkinter does not exist.
-support.import_module('_tkinter')
-
-from tkinter.test import runtktests
-
-def test_main():
-    support.run_unittest(
-            *runtktests.get_tests(gui=False, packages=['test_ttk']))
-
-if __name__ == '__main__':
-    test_main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:a7fdd6d66ecbbd26797d186a9f02ab25b0249ed9f24a99a3e896b980ebac7226
+size 312

@@ -1,21 +1,3 @@
-def is_instance(obj, klass):
-    """Version of is_instance that doesn't access __class__"""
-    return issubclass(type(obj), klass)
-
-
-class SomeClass(object):
-    class_attribute = None
-
-    def wibble(self):
-        pass
-
-
-class X(object):
-    pass
-
-
-def examine_warnings(func):
-    def wrapper():
-        with catch_warnings(record=True) as ws:
-            func(ws)
-    return wrapper
+version https://git-lfs.github.com/spec/v1
+oid sha256:a0265468ab3a56de9c94a20379179f35962eb8295f2038b61d6cf8fc97731a62
+size 408

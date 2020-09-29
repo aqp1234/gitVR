@@ -1,18 +1,3 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-//
-// Purpose: Adding this component to an object will allow the player to
-//			initiate teleporting while that object is attached to their hand
-//
-//=============================================================================
-
-using UnityEngine;
-
-namespace Valve.VR.InteractionSystem
-{
-	//-------------------------------------------------------------------------
-	public class AllowTeleportWhileAttachedToHand : MonoBehaviour
-	{
-		public bool teleportAllowed = true;
-		public bool overrideHoverLock = true;
-	}
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:619109f64dcfc350ce6071769301366a8de7bce5d3bf9f5741975f7812a622a6
+size 615

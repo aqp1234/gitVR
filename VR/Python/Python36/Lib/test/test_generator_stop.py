@@ -1,34 +1,3 @@
-from __future__ import generator_stop
-
-import unittest
-
-
-class TestPEP479(unittest.TestCase):
-    def test_stopiteration_wrapping(self):
-        def f():
-            raise StopIteration
-        def g():
-            yield f()
-        with self.assertRaisesRegex(RuntimeError,
-                                    "generator raised StopIteration"):
-            next(g())
-
-    def test_stopiteration_wrapping_context(self):
-        def f():
-            raise StopIteration
-        def g():
-            yield f()
-
-        try:
-            next(g())
-        except RuntimeError as exc:
-            self.assertIs(type(exc.__cause__), StopIteration)
-            self.assertIs(type(exc.__context__), StopIteration)
-            self.assertTrue(exc.__suppress_context__)
-        else:
-            self.fail('__cause__, __context__, or __suppress_context__ '
-                      'were not properly set')
-
-
-if __name__ == '__main__':
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:ffb296d249ef3cb3598d2960ca961c8ecfe528fe0e867a288e738c5fe9a5ce5e
+size 977

@@ -1,22 +1,3 @@
-#
-# test_codecencodings_tw.py
-#   Codec encoding tests for ROC encodings.
-#
-
-from test import multibytecodec_support
-import unittest
-
-class Test_Big5(multibytecodec_support.TestBase, unittest.TestCase):
-    encoding = 'big5'
-    tstring = multibytecodec_support.load_teststring('big5')
-    codectests = (
-        # invalid bytes
-        (b"abc\x80\x80\xc1\xc4", "strict",  None),
-        (b"abc\xc8", "strict",  None),
-        (b"abc\x80\x80\xc1\xc4", "replace", "abc\ufffd\ufffd\u8b10"),
-        (b"abc\x80\x80\xc1\xc4\xc8", "replace", "abc\ufffd\ufffd\u8b10\ufffd"),
-        (b"abc\x80\x80\xc1\xc4", "ignore",  "abc\u8b10"),
-    )
-
-if __name__ == "__main__":
-    unittest.main()
+version https://git-lfs.github.com/spec/v1
+oid sha256:ced9f1a261ac71975e162fe3d43a718bf45791fcdda832f703e2df391496f650
+size 703

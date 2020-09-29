@@ -1,11 +1,3 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-
-using System;
-using UnityEngine;
-using UnityEngine.Events;
-
-namespace Valve.VR
-{
-    [Serializable]
-    public class SteamVR_Behaviour_Vector3Event : UnityEvent<SteamVR_Behaviour_Vector3, SteamVR_Input_Sources, Vector3, Vector3> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:5ebf573314200148ab43e534929f45013d8cae74fe44390c236c34c7eec7edea
+size 328

@@ -1,23 +1,3 @@
-{
-  "name": "com.unity.xr.openvr.standalone",
-  "displayName": "OpenVR Desktop",
-  "version": "2.0.5",
-  "unity": "2019.3",
-  "description": "*** IMPORTANT : READ ME ***\n\nThis package is deprecated and will be removed in Unity 2020.1.\n\nThis package contains the necessary components required to use the OpenVR SDK on desktop platforms. By using this package, you will be able to deploy and run your applications on SteamVR supported devices.",
-  "keywords": [
-    "openvr",
-    "xr",
-    "vr",
-    "virtual",
-    "open",
-    "steam",
-    "steamvr",
-    "deprecated"
-  ],
-  "dependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:Unity-Technologies/com.unity.xr.openvr.standalone.git",
-    "revision": "359d95b0f8ab074d6c475988d5cf97975ee978c4"
-  }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:c3e4ca9002d3a521834f70e7c0655bd15c15aee94f32a8e86e32ced9410484c2
+size 782

@@ -1,9 +1,3 @@
-﻿//======= Copyright (c) Valve Corporation, All rights reserved. ===============
-using System;
-using UnityEngine.Events;
-
-namespace Valve.VR
-{
-    [Serializable]
-    public class SteamVR_Behaviour_BooleanEvent : UnityEvent<SteamVR_Behaviour_Boolean, SteamVR_Input_Sources, bool> { }
-}
+version https://git-lfs.github.com/spec/v1
+oid sha256:331c7f29d02ee06fb066be361e52ef0c8da532cd86f555aaae6a5ed6f72e9ec7
+size 294

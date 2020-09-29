@@ -1,18 +1,3 @@
-"""
-Correct syntax for variable annotation that should fail at runtime
-in a certain manner. More examples are in test_grammar and test_parser.
-"""
-
-def f_bad_ann():
-    __annotations__[1] = 2
-
-class C_OK:
-    def __init__(self, x: int) -> None:
-        self.x: no_such_name = x  # This one is OK as proposed by Guido
-
-class D_bad_ann:
-    def __init__(self, x: int) -> None:
-        sfel.y: int = 0
-
-def g_bad_ann():
-    no_such_name.attr: int = 0
+version https://git-lfs.github.com/spec/v1
+oid sha256:e8e95aaab3f92e638482193779f0dec543b1a8be2203be48370809e5be441d6e
+size 466
