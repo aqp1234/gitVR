@@ -2,6 +2,7 @@ Base path: 'C:/Program Files/Unity/Hub/Editor/2019.4.11f1/Editor/Data', plugins 
 Cmd: initializeCompiler
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Cmd: preprocess
   insize=14895 outsize=8531 ok=1
 Cmd: compileSnippet
@@ -23,6 +24,8 @@ Cmd: compileSnippet
 Cmd: preprocess
   insize=814 outsize=957 ok=1
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 Cmd: initializeCompiler
@@ -177,6 +180,9 @@ Cmd: compileSnippet
 Cmd: compileSnippet
   api=4 type=1 insize=7108 outsize=5306 kw=UNDERLAY_ON BEVEL_ON GLOW_ON pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_USE_DITHER_MASK_FOR_ALPHABLENDED_SHADOWS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING UNITY_ENABLE_DETAIL_NORMALMAP SHADER_API_DESKTOP UNITY_LIGHT_PROBE_PROXY_VOLUME UNITY_LIGHTMAP_FULL_HDR ok=1
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes

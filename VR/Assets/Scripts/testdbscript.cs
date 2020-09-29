@@ -169,7 +169,11 @@ public class testdbscript : MonoBehaviour
             playerbuttonins.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
             playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-55*(a+1), -300, 0);
+=======
+            playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-220+55*(a+1), -300, 0);
+>>>>>>> Stashed changes
 =======
             playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-220+55*(a+1), -300, 0);
 >>>>>>> Stashed changes
