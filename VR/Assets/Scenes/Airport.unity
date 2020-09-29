@@ -42170,11 +42170,19 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       objectReference: {fileID: 469117380}
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 96603217}
+=======
+      objectReference: {fileID: 1827960255}
+    - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 343806970}
+>>>>>>> Stashed changes
 =======
       objectReference: {fileID: 1827960255}
     - target: {fileID: 3380982, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
