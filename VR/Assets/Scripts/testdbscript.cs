@@ -164,13 +164,19 @@ public class testdbscript : MonoBehaviour
             //playerbuttonins.GetComponent<Button>().onClick.AddListener(PlayNPCScenario);
             playerbuttonins.name= "playerbutton"+a;
             //playerbuttonins.GetChild(0).GetComponent<Text>().text = ""+(player_foreign_scenario_arr[(int) scenario_number-1].Length - a);
+            playerbuttonins.GetComponent<Image>().sprite = Resources.Load<Sprite>("num/num" + (a+1) +"") as Sprite;
             playerbuttonins.GetComponent<RectTransform>().anchorMax = new Vector2(1f,1f);
             playerbuttonins.GetComponent<RectTransform>().anchorMin = new Vector2(1f,1f);
+<<<<<<< Updated upstream
             playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-55*(a+1), -300, 0);
+=======
+            playerbuttonins.GetComponent<RectTransform>().anchoredPosition = new Vector3(-220+55*(a+1), -300, 0);
+>>>>>>> Stashed changes
             playerbuttonins.transform.localPosition = new Vector3(playerbuttonins.transform.localPosition.x, playerbuttonins.transform.localPosition.y, 0.0f);
             playerbuttonins.GetComponent<RectTransform>().localScale = new Vector3(1.0f,1.0f,1.0f);
             playerbuttonins.GetComponent<RectTransform>().sizeDelta = new Vector2(50.0f, 50.0f);
             playerbuttonins.GetComponent<RectTransform>().rotation = new Quaternion(0.0f,0.0f,0.0f,0.0f);
+
         }
     }
 

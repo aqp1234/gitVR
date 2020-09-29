@@ -82,3 +82,11 @@ Update Mode: resetToDefaultDependencies
 
 The following packages were removed:
   com.unity.xr.openvr.standalone@2.0.5
+
+=== Tue Sep 29 14:11:45 2020
+
+Packages were changed.
+Update Mode: resetToDefaultDependencies
+
+The following packages were removed:
+  com.unity.xr.openvr.standalone@2.0.5
